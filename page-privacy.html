@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>INNOV | 개인정보처리방침</title>
+<meta name="description" content="INNOV 개인정보처리방침">
+
+<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    font-family: 'Pretendard', sans-serif;
+    color: #222222;
+    background: #f9f7ec;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+
+  .legal-hero {
+    background: linear-gradient(180deg, #f9f7ec 0%, #f1efe1 100%);
+    text-align: center;
+    padding: 96px 24px 56px;
+    border-bottom: 1px solid rgba(19, 58, 34, 0.08);
+  }
+  .legal-eyebrow {
+    font-family: 'Caveat', cursive;
+    font-size: 28px;
+    color: #b891f9;
+    margin-bottom: 8px;
+    line-height: 1;
+  }
+  .legal-hero h1 {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 900;
+    color: #133a22;
+    letter-spacing: -0.02em;
+    margin: 0 0 16px;
+  }
+  .legal-meta {
+    font-size: 13px;
+    color: #767676;
+  }
+
+  .legal-intro {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 48px 24px 0;
+  }
+  .legal-intro p {
+    font-size: 15px;
+    line-height: 1.95;
+    color: #333;
+    background: #fff;
+    border-left: 4px solid #caa9fc;
+    padding: 22px 26px;
+    border-radius: 12px;
+    word-break: keep-all;
+  }
+
+  .legal-body {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 56px 24px 120px;
+  }
+  .legal-body section { margin-bottom: 56px; }
+  .legal-body h2 {
+    font-size: 19px;
+    font-weight: 800;
+    color: #133a22;
+    letter-spacing: -0.01em;
+    margin: 0 0 16px;
+    padding-bottom: 12px;
+    border-bottom: 1.5px solid rgba(19, 58, 34, 0.15);
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  .legal-body h2 .art-num {
+    font-family: 'Caveat', cursive;
+    font-size: 24px;
+    color: #b891f9;
+    font-weight: 700;
+  }
+  .legal-body p {
+    font-size: 15px;
+    color: #333333;
+    line-height: 1.9;
+    margin: 0 0 14px;
+    word-break: keep-all;
+  }
+  .legal-body ol, .legal-body ul {
+    margin: 8px 0 18px;
+    padding-left: 22px;
+  }
+  .legal-body ol li, .legal-body ul li {
+    font-size: 14.5px;
+    color: #333333;
+    line-height: 1.85;
+    margin-bottom: 8px;
+    padding-left: 4px;
+    word-break: keep-all;
+  }
+  .legal-body ol ul, .legal-body ul ul {
+    margin: 6px 0 6px;
+    list-style: '— ';
+  }
+  .legal-body strong { color: #133a22; font-weight: 700; }
+  .legal-body .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 18px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(19, 58, 34, 0.05);
+  }
+  .legal-body .data-table th,
+  .legal-body .data-table td {
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 13.5px;
+    border-bottom: 1px solid rgba(19, 58, 34, 0.08);
+    word-break: keep-all;
+  }
+  .legal-body .data-table th {
+    background: #dceee3;
+    color: #133a22;
+    font-weight: 700;
+    font-size: 12.5px;
+    letter-spacing: 0.02em;
+  }
+  .legal-body .data-table tr:last-child td { border-bottom: none; }
+  .legal-body .data-table td:first-child {
+    font-weight: 700;
+    color: #133a22;
+    white-space: nowrap;
+    width: 28%;
+  }
+  .legal-body .effective {
+    margin-top: 64px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(19, 58, 34, 0.1);
+    font-size: 13.5px;
+    color: #767676;
+    text-align: center;
+  }
+  .legal-body .effective strong { color: #133a22; }
+
+  /* Quick nav (sticky table of contents) */
+  .legal-toc {
+    background: #fff;
+    border: 1px solid rgba(19, 58, 34, 0.08);
+    border-radius: 14px;
+    padding: 22px 24px;
+    margin-bottom: 56px;
+  }
+  .legal-toc h3 {
+    font-size: 12px;
+    font-weight: 800;
+    color: #b891f9;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin: 0 0 14px;
+  }
+  .legal-toc ol {
+    columns: 2;
+    gap: 24px;
+    margin: 0;
+    padding-left: 18px;
+  }
+  .legal-toc ol li {
+    font-size: 13px;
+    color: #333;
+    line-height: 1.9;
+    margin-bottom: 0;
+    break-inside: avoid;
+  }
+  .legal-toc a {
+    color: #133a22;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+  }
+  .legal-toc a:hover { border-bottom-color: #b891f9; }
+
+  @media (max-width: 600px) {
+    .legal-hero { padding: 72px 18px 40px; }
+    .legal-intro { padding: 36px 18px 0; }
+    .legal-body { padding: 40px 18px 80px; }
+    .legal-body h2 { font-size: 17px; }
+    .legal-body p, .legal-body ol li, .legal-body ul li { font-size: 14px; }
+    .legal-toc ol { columns: 1; }
+    .legal-body .data-table th, .legal-body .data-table td { font-size: 12.5px; padding: 10px 12px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Shared Navigation -->
+<nav class="innov-nav" id="innovNav">
+  <div class="innov-nav-inner">
+    <a href="index.html" class="innov-nav-logo">
+      <img src="symbol.png" alt="innov 심볼" class="innov-nav-symbol" />
+      <img src="logo-innov.png" alt="innov" class="innov-nav-wordmark" onerror="this.outerHTML='<span class=\'brand-script\'>innov</span>'" />
+    </a>
+    <ul class="innov-nav-menu" id="innovMenu">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="page-about.html">ABOUT</a></li>
+      <li><a href="page-counselors.html">COACH</a></li>
+      <li><a href="page-programs.html">PROGRAM</a></li>
+      <li><a href="page-apply.html">APPLY</a></li>
+    </ul>
+    <a href="page-apply.html" class="innov-nav-cta">상담 신청</a>
+    <button class="innov-nav-toggle" id="innovToggle" aria-label="메뉴 열기">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<header class="legal-hero">
+  <div class="legal-eyebrow">privacy policy</div>
+  <h1>개인정보처리방침</h1>
+  <p class="legal-meta">시행일: 2026년 5월 19일</p>
+</header>
+
+<section class="legal-intro">
+  <p>INNOV(이하 "회사")는 정보주체의 자유와 권리 보호를 위해 「개인정보 보호법」 및 관계 법령이 정한 바를 준수하여, 적법하게 개인정보를 처리하고 안전하게 관리하고 있습니다. 본 처리방침은 회사가 어떤 정보를 수집하고, 어떻게 사용하며, 어떻게 보호하는지 투명하게 안내합니다.</p>
+</section>
+
+<main class="legal-body">
+
+  <nav class="legal-toc" aria-label="목차">
+    <h3>contents</h3>
+    <ol>
+      <li><a href="#a1">제1조 개인정보의 처리 목적</a></li>
+      <li><a href="#a2">제2조 수집하는 개인정보 항목</a></li>
+      <li><a href="#a3">제3조 민감정보의 처리</a></li>
+      <li><a href="#a4">제4조 개인정보의 보유 기간</a></li>
+      <li><a href="#a5">제5조 개인정보의 제3자 제공</a></li>
+      <li><a href="#a6">제6조 개인정보 처리 위탁</a></li>
+      <li><a href="#a7">제7조 정보주체의 권리·의무</a></li>
+      <li><a href="#a8">제8조 개인정보의 파기</a></li>
+      <li><a href="#a9">제9조 안전성 확보 조치</a></li>
+      <li><a href="#a10">제10조 쿠키 및 광고성 정보 수신</a></li>
+      <li><a href="#a11">제11조 개인정보 보호책임자</a></li>
+      <li><a href="#a12">제12조 권익침해 구제 방법</a></li>
+      <li><a href="#a13">제13조 처리방침의 변경</a></li>
+    </ol>
+  </nav>
+
+  <section id="a1">
+    <h2><span class="art-num">01</span> 제1조 (개인정보의 처리 목적)</h2>
+    <p>회사는 다음의 목적을 위하여 개인정보를 처리합니다:</p>
+    <ol>
+      <li><strong>회원 가입 및 관리:</strong> 회원 식별, 본인 확인, 부정 이용 방지</li>
+      <li><strong>서비스 제공:</strong> 코칭 프로그램 운영, 상담사 매칭, 결제, 진단 결과 제공</li>
+      <li><strong>마케팅 및 광고:</strong> 신규 프로그램·이벤트 안내, 뉴스레터, 광고성 정보 제공 <em>(별도 동의 시에 한함 — 자세한 내용은 제10조 참조)</em></li>
+      <li><strong>고객 문의 응대:</strong> 문의 응답, 분쟁 조정 기록 보관</li>
+    </ol>
+  </section>
+
+  <section id="a2">
+    <h2><span class="art-num">02</span> 제2조 (수집하는 개인정보 항목)</h2>
+    <table class="data-table">
+      <thead>
+        <tr><th>수집 시점</th><th>수집 항목</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>회원가입 시 (필수)</td><td>이름, 이메일, 비밀번호, 생년월일</td></tr>
+        <tr><td>회원가입 시 (선택)</td><td>연락처, 거주 지역</td></tr>
+        <tr><td>서비스 신청 시 (필수)</td><td>결제 정보(카드사명, 결제 일시), 사전 설문 응답</td></tr>
+        <tr><td>서비스 신청 시 (선택)</td><td>비상연락처</td></tr>
+        <tr><td>자동 수집</td><td>IP 주소, 쿠키, 서비스 이용 기록, 접속 로그, 기기 정보</td></tr>
+        <tr><td>상담 진행 중</td><td>진단 결과(의식수준 TEST, VAK, SCT), 상담 세션 노트</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="a3">
+    <h2><span class="art-num">03</span> 제3조 (민감정보의 처리)</h2>
+    <ol>
+      <li>회사는 코칭 서비스 제공 과정에서 정신건강·심리상태에 관한 정보를 수집할 수 있으며, 이는 「개인정보 보호법」 제23조에 따른 <strong>민감정보</strong>에 해당합니다.</li>
+      <li>민감정보는 정보주체의 <strong>명시적 동의</strong>를 받은 경우에 한하여 처리하며, 다른 개인정보와 분리하여 저장합니다.</li>
+      <li>민감정보의 처리 목적은 코칭 서비스 제공에 한정되며, 별도의 동의 없이 다른 목적으로 사용되지 않습니다.</li>
+      <li>민감정보는 일반 개인정보보다 강화된 암호화·접근 통제 기준으로 보호됩니다.</li>
+    </ol>
+  </section>
+
+  <section id="a4">
+    <h2><span class="art-num">04</span> 제4조 (개인정보의 보유 기간)</h2>
+    <table class="data-table">
+      <thead>
+        <tr><th>구분</th><th>보유 기간</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>회원 정보</td><td>회원 탈퇴 시까지 (관련 법령에 따라 보관 의무가 있는 경우 그 기간)</td></tr>
+        <tr><td>결제 기록</td><td>5년 (전자상거래법)</td></tr>
+        <tr><td>상담 기록</td><td>마지막 상담일로부터 3년 (정보주체 요청 시 즉시 파기)</td></tr>
+        <tr><td>문의 기록</td><td>응대 완료 후 6개월</td></tr>
+        <tr><td>접속 로그</td><td>3개월 (통신비밀보호법)</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="a5">
+    <h2><span class="art-num">05</span> 제5조 (개인정보의 제3자 제공)</h2>
+    <ol>
+      <li>회사는 원칙적으로 정보주체의 동의 없이 개인정보를 외부에 제공하지 않습니다.</li>
+      <li>다음의 경우 예외적으로 제공할 수 있습니다:
+        <ul>
+          <li>정보주체의 사전 동의가 있는 경우</li>
+          <li>법령에 의하여 요구되는 경우</li>
+          <li>통계 작성, 학술 연구 등의 목적으로 익명화된 형태로 제공하는 경우</li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+
+  <section id="a6">
+    <h2><span class="art-num">06</span> 제6조 (개인정보 처리의 위탁)</h2>
+    <p><strong>현재 회사는 개인정보 처리를 외부 기관에 위탁하고 있지 않습니다.</strong></p>
+    <p>향후 서비스 운영을 위해 위탁이 필요한 경우(예: 결제 처리, 호스팅, 메시지 발송 등), 회사는 본 처리방침의 개정을 통해 위탁 사실 및 위탁 받는 자, 위탁 업무의 내용을 사전에 공지합니다. 위탁계약 체결 시에는 「개인정보 보호법」 제26조에 따라 위탁업무 수행 목적 외 개인정보 처리 금지, 안전성 확보 조치, 재위탁 제한 등을 명시한 계약을 체결합니다.</p>
+  </section>
+
+  <section id="a7">
+    <h2><span class="art-num">07</span> 제7조 (정보주체의 권리·의무 및 행사 방법)</h2>
+    <ol>
+      <li>정보주체는 회사에 대해 언제든지 다음의 권리를 행사할 수 있습니다:
+        <ul>
+          <li>개인정보 열람 요구</li>
+          <li>오류 등이 있을 경우 정정 요구</li>
+          <li>삭제 요구</li>
+          <li>처리 정지 요구</li>
+        </ul>
+      </li>
+      <li>권리 행사는 이메일(<strong>innov.storytelling@gmail.com</strong>)을 통해 요청할 수 있으며, 회사는 지체 없이 조치합니다.</li>
+    </ol>
+  </section>
+
+  <section id="a8">
+    <h2><span class="art-num">08</span> 제8조 (개인정보의 파기)</h2>
+    <ol>
+      <li>회사는 개인정보 보유기간의 경과, 처리 목적 달성 등 개인정보가 불필요하게 되었을 때에는 지체 없이 해당 개인정보를 파기합니다.</li>
+      <li>전자적 파일 형태의 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제합니다.</li>
+      <li>종이 문서에 기록된 개인정보는 분쇄기로 분쇄하거나 소각합니다.</li>
+    </ol>
+  </section>
+
+  <section id="a9">
+    <h2><span class="art-num">09</span> 제9조 (개인정보의 안전성 확보 조치)</h2>
+    <p>회사는 「개인정보 보호법」 제29조에 따라 다음과 같은 안전성 확보 조치를 취하고 있습니다:</p>
+    <ol>
+      <li><strong>관리적 조치:</strong> 내부관리계획 수립·시행, 직원 정기 교육, 상담사 윤리강령 준수</li>
+      <li><strong>기술적 조치:</strong> 개인정보 접근권한 관리, 접근통제시스템 설치, 고유식별정보 등의 암호화, 보안프로그램 설치</li>
+      <li><strong>물리적 조치:</strong> 자료보관실 등의 접근통제, 종이 문서의 잠금 보관</li>
+    </ol>
+  </section>
+
+  <section id="a10">
+    <h2><span class="art-num">10</span> 제10조 (쿠키 및 광고성 정보 수신)</h2>
+    <p><strong>1. 쿠키(Cookie) 사용</strong></p>
+    <ol>
+      <li>회사는 서비스 개선 및 이용 통계 분석을 위해 쿠키를 사용합니다.</li>
+      <li>이용자는 웹 브라우저 설정을 통해 쿠키 저장을 거부할 수 있으나, 이 경우 일부 서비스 이용에 제한이 있을 수 있습니다.</li>
+    </ol>
+
+    <p style="margin-top: 20px;"><strong>2. 광고성 정보 수신 동의</strong></p>
+    <ol>
+      <li>회사는 회원가입 시 또는 별도의 동의를 받은 회원에게 이메일·SMS·카카오톡 채널 등을 통해 다음과 같은 광고성 정보를 발송할 수 있습니다:
+        <ul>
+          <li>신규 프로그램 및 기수 모집 안내</li>
+          <li>이벤트, 할인, 프로모션 정보</li>
+          <li>관련 콘텐츠(뉴스레터, 칼럼, 인사이트 등)</li>
+        </ul>
+      </li>
+      <li>광고성 정보 수신은 <strong>「정보통신망 이용촉진 및 정보보호 등에 관한 법률」 제50조</strong>에 따라 정보주체의 <strong>명시적 사전 동의</strong>가 있는 경우에 한하여 발송됩니다.</li>
+      <li>수신 동의는 회원가입 양식, 마이페이지, 또는 별도의 안내 페이지에서 자유롭게 선택·해제할 수 있습니다.</li>
+      <li>수신 동의 후에도 언제든지 다음과 같은 방법으로 수신 거부(수신 동의 철회)할 수 있습니다:
+        <ul>
+          <li>이메일 하단의 <strong>"수신 거부"</strong> 링크 클릭</li>
+          <li>마이페이지 → 알림 설정에서 직접 변경</li>
+          <li>이메일(innov.storytelling@gmail.com)로 요청</li>
+        </ul>
+      </li>
+      <li>수신 동의 여부와 관계없이, <strong>서비스 이용에 필수적인 거래·결제·상담 일정 등 정보성 안내</strong>는 발송됩니다.</li>
+    </ol>
+  </section>
+
+  <section id="a11">
+    <h2><span class="art-num">11</span> 제11조 (개인정보 보호책임자)</h2>
+    <p>회사는 개인정보 처리에 관한 업무를 총괄하고 정보주체의 불만 처리 및 피해 구제를 위하여 아래와 같이 개인정보 보호책임자를 지정하고 있습니다:</p>
+    <table class="data-table">
+      <tbody>
+        <tr><td>성명</td><td>고가영</td></tr>
+        <tr><td>직책</td><td>대표</td></tr>
+        <tr><td>이메일</td><td>innov.storytelling@gmail.com</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="a12">
+    <h2><span class="art-num">12</span> 제12조 (권익침해 구제 방법)</h2>
+    <p>정보주체는 아래 기관에 개인정보 침해에 대한 피해구제, 상담 등을 문의할 수 있습니다:</p>
+    <table class="data-table">
+      <thead>
+        <tr><th>기관</th><th>연락처</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>개인정보분쟁조정위원회</td><td>1833-6972 · www.kopico.go.kr</td></tr>
+        <tr><td>개인정보침해신고센터</td><td>118 · privacy.kisa.or.kr</td></tr>
+        <tr><td>대검찰청 사이버수사과</td><td>1301 · www.spo.go.kr</td></tr>
+        <tr><td>경찰청 사이버수사국</td><td>182 · cyberbureau.police.go.kr</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="a13">
+    <h2><span class="art-num">13</span> 제13조 (개인정보 처리방침의 변경)</h2>
+    <p>이 개인정보 처리방침은 <strong>2026년 5월 19일</strong>부터 적용됩니다. 법령 및 방침에 따른 변경 내용의 추가, 삭제 및 정정이 있는 경우에는 변경사항의 시행 7일 전부터 공지사항을 통하여 고지합니다.</p>
+  </section>
+
+  <p class="effective">
+    본 방침은 <strong>2026년 5월 19일</strong>부터 시행됩니다.<br>
+    INNOV · 대표 고가영 · 사업자등록번호 790-30-01865<br>
+    대전광역시 서구 둔산대로 117번길 66, 1202-139호
+  </p>
+
+</main>
+
+<!-- Shared Footer -->
+<footer class="innov-footer">
+  <div class="innov-footer-inner">
+    <div class="innov-footer-brand innov-footer-col">
+      <a href="index.html" class="innov-footer-logo">
+        <img src="symbol.png" alt="innov 심볼" class="innov-footer-symbol">
+        <img src="logo-innov.png" alt="innov" class="innov-footer-wordmark" onerror="this.outerHTML='<span class=\'brand-script\'>innov</span>'">
+      </a>
+      <p class="innov-footer-tagline">보이지 않는 내면의 구조를 시각화하여,<br>실질적인 삶의 변화를 만드는 혁신적 코칭 솔루션</p>
+      <div class="innov-footer-social">
+        <a href="mailto:innov.storytelling@gmail.com">Email</a>
+        <a href="https://pf.kakao.com/_xodxeTX" target="_blank" rel="noopener">KakaoTalk</a>
+        <a href="https://www.instagram.com/innov.kr/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="innov-footer-nav innov-footer-col">
+      <h4>Menu</h4>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="page-about.html">ABOUT</a></li>
+        <li><a href="page-counselors.html">COACH</a></li>
+        <li><a href="page-programs.html">PROGRAM</a></li>
+        <li><a href="page-apply.html">APPLY</a></li>
+      </ul>
+    </div>
+    <div class="innov-footer-info innov-footer-col">
+      <h4>Company</h4>
+      <p><strong>CEO</strong> · 고가영</p>
+      <p><strong>Address</strong> · 대전광역시 서구 둔산대로 117번길 66, 1202-139호</p>
+      <p><strong>사업자등록번호</strong> · 790-30-01865</p>
+      <p><strong>운영시간</strong> · 평일 10:00 — 19:00</p>
+      <p><strong>Contact</strong> · innov.storytelling@gmail.com</p>
+    </div>
+  </div>
+  <div class="innov-footer-bottom">
+    <div class="innov-footer-bottom-inner">
+      <div class="innov-footer-legal">
+        <a href="page-terms.html">이용약관</a>
+        <a href="page-privacy.html">개인정보처리방침</a>
+      </div>
+      <p class="innov-footer-copy">© 2026 INNOV. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('innovNav');
+  const menu = document.getElementById('innovMenu');
+  document.getElementById('innovToggle').addEventListener('click', () => menu.classList.toggle('open'));
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 8));
+</script>
+</body>
+</html>

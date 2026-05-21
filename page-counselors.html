@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>INNOV 상담진 | NLP 전문 청년 멘탈 코칭</title>
+  <meta name="description"
+    content="서울대 공학·성균관대 생명과학·한예종 조형예술 출신의 NLP 1급 전문 상담사 팀. 1,000+ 청년 상담 경험에서 나온 체험 기반 코칭.">
+
+  <!-- Shared Navigation -->
+  <link rel="stylesheet" href="shared.css">
+
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+
+  <style>
+    :root {
+      --dark: #133a22;
+      --dark-2: #0d2917;
+      --lavender: #caa9fc;
+      --lavender-2: #b891f9;
+      --lavender-soft: #e7d7ff;
+      --mint: #dceee3;
+      --mint-2: #c9e3d2;
+      --cream: #f9f7ec;
+      --white: #ffffff;
+      --charcoal: #222222;
+      --gray: #767676;
+      --border: #e6e6e6;
+      --radius: 16px;
+      --radius-lg: 24px;
+      --shadow: 0 4px 24px rgba(19, 58, 34, 0.06);
+      --shadow-lg: 0 12px 40px rgba(19, 58, 34, 0.1);
+      --sans: 'Pretendard', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      color: var(--charcoal);
+      line-height: 1.7;
+      font-size: 16px;
+      letter-spacing: -0.01em;
+      background: var(--cream);
+      -webkit-font-smoothing: antialiased;
+      padding-top: var(--nav-height, 64px);
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .innov-section { padding: clamp(80px, 12vw, 140px) 24px; position: relative; overflow: hidden; }
+    .innov-container { max-width: 1160px; margin: 0 auto; position: relative; z-index: 2; }
+
+    .innov-overline {
+      display: inline-block;
+      font-size: 12px;
+      color: var(--lavender-2);
+      margin-bottom: 14px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .innov-headline {
+      font-size: clamp(28px, 4.6vw, 44px);
+      font-weight: 800;
+      line-height: 1.3;
+      color: var(--dark);
+      letter-spacing: -0.02em;
+    }
+    .innov-headline em {
+      font-style: normal;
+      position: relative;
+      display: inline-block;
+    }
+    .innov-headline em::after {
+      content: '';
+      position: absolute;
+      left: -4px;
+      right: -4px;
+      bottom: 4px;
+      height: 12px;
+      background: var(--lavender-soft);
+      z-index: -1;
+      border-radius: 4px;
+    }
+
+    .innov-subhead {
+      font-size: clamp(15px, 2vw, 18px);
+      color: var(--gray);
+      margin-top: 18px;
+      line-height: 1.75;
+    }
+
+    .innov-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 28px;
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      transition: all 0.2s ease;
+      gap: 8px;
+      min-height: 54px;
+    }
+    .innov-btn-lavender,
+    .innov-btn-lavender:visited { background: var(--lavender); color: var(--dark); }
+    .innov-btn-lavender:hover { background: var(--lavender-2); transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+
+    a.innov-btn-lavender,
+    a.innov-btn-lavender:link,
+    a.innov-btn-lavender:visited,
+    a.innov-btn-lavender:hover,
+    a.innov-btn-lavender:active,
+    a.innov-btn-lavender:focus { color: #133a22 !important; }
+
+    .innov-btn-arrow::after { content: '→'; font-size: 18px; transition: transform 0.2s ease; }
+    .innov-btn-arrow:hover::after { transform: translateX(4px); }
+
+    /* ============================================================
+       Section 1 · Hero
+       ============================================================ */
+    .c-hero {
+      background: var(--mint);
+      text-align: center;
+      padding: clamp(120px, 15vw, 180px) 24px 100px;
+      position: relative;
+      overflow: hidden;
+    }
+    .c-hero::before {
+      content: '';
+      position: absolute;
+      top: -10%; left: -10%;
+      width: 480px; height: 480px;
+      background: var(--lavender);
+      border-radius: 50%;
+      filter: blur(110px);
+      opacity: 0.25;
+      pointer-events: none;
+    }
+    .c-hero::after {
+      content: '';
+      position: absolute;
+      bottom: -20%; right: -5%;
+      width: 480px; height: 480px;
+      background: var(--mint-2);
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: 0.7;
+      pointer-events: none;
+    }
+    .c-hero h1 {
+      font-size: clamp(30px, 5.2vw, 50px);
+      font-weight: 800;
+      line-height: 1.3;
+      color: var(--dark);
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+    }
+    .c-hero h1 em {
+      font-style: normal;
+      position: relative;
+      display: inline-block;
+    }
+    .c-hero h1 em::after {
+      content: '';
+      position: absolute;
+      left: -4px; right: -4px; bottom: 4px;
+      height: 14px;
+      background: var(--lavender-soft);
+      z-index: -1;
+      border-radius: 4px;
+    }
+    .c-hero-sub {
+      font-size: clamp(16px, 2vw, 18px);
+      color: var(--charcoal);
+      line-height: 1.85;
+      max-width: 640px;
+      margin: 0 auto 36px;
+    }
+    .c-hero-sub strong { color: var(--dark); font-weight: 800; }
+    .c-hero-tag {
+      font-size: 13px;
+      color: var(--gray);
+      letter-spacing: 0.1em;
+      margin-top: 8px;
+    }
+
+    /* ============================================================
+       Section 2 · Meet the Team (mint banner with photo cards)
+       ============================================================ */
+    .meet {
+      background: #dceee3;
+      padding: clamp(60px, 9vw, 100px) 24px clamp(72px, 10vw, 110px);
+    }
+    .meet-banner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      max-width: 1160px;
+      margin: 0 auto 60px;
+    }
+    .meet-banner-logo {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none !important;
+    }
+    .meet-banner-logo img {
+      height: 36px;
+      width: auto;
+      display: block;
+    }
+    .meet-banner-logo .brand-script {
+      font-family: 'Caveat', cursive;
+      font-size: 36px;
+      font-weight: 700;
+      color: #133a22;
+      line-height: 1;
+    }
+    .meet-banner-tag {
+      font-size: 15px;
+      color: var(--dark);
+      font-weight: 600;
+      letter-spacing: -0.005em;
+      margin: 0;
+    }
+    .meet-banner-tag .bar {
+      color: var(--lavender-2);
+      margin: 0 10px;
+      font-weight: 300;
+    }
+
+    .meet-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      max-width: 1160px;
+      margin: 0 auto;
+    }
+    .meet-card {
+      text-align: center;
+      text-decoration: none !important;
+      color: inherit !important;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      transition: transform 0.25s ease;
+    }
+    .meet-card:hover { transform: translateY(-6px); }
+    .meet-card:hover .meet-name-kr { color: var(--lavender-2); }
+
+    .meet-photo-wrap {
+      position: relative;
+      width: clamp(160px, 22vw, 220px);
+      height: clamp(160px, 22vw, 220px);
+      margin: 0 auto 28px;
+    }
+    .meet-photo {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      background: var(--white);
+      box-shadow: 0 10px 28px rgba(19, 58, 34, 0.12);
+      display: block;
+      filter: grayscale(1) contrast(1.05);
+      transition: filter 0.3s ease;
+    }
+    .meet-card:hover .meet-photo {
+      filter: grayscale(0.2) contrast(1);
+    }
+    .meet-photo-fallback {
+      width: 100%; height: 100%;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--lavender) 0%, var(--lavender-2) 100%);
+      color: var(--dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: clamp(48px, 7vw, 72px);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      box-shadow: 0 10px 28px rgba(19, 58, 34, 0.12);
+    }
+    .meet-photo-accent {
+      position: absolute;
+      bottom: -6px;
+      right: 0;
+      width: clamp(46px, 7vw, 64px);
+      height: clamp(46px, 7vw, 64px);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .meet-name-row {
+      margin-bottom: 24px;
+    }
+    .meet-name-kr {
+      font-size: clamp(18px, 2.2vw, 22px);
+      font-weight: 800;
+      color: var(--dark);
+      letter-spacing: -0.02em;
+      transition: color 0.2s;
+    }
+    .meet-name-en {
+      font-size: clamp(13px, 1.5vw, 15px);
+      color: var(--dark);
+      font-weight: 600;
+      margin-left: 6px;
+      letter-spacing: 0.06em;
+    }
+    .meet-creds {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+    }
+    .meet-creds li {
+      font-size: clamp(13px, 1.4vw, 14.5px);
+      color: var(--dark);
+      line-height: 1.95;
+      word-break: keep-all;
+      margin-bottom: 4px;
+    }
+    .meet-cta-hint {
+      margin-top: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--lavender-2);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0.7;
+      transition: opacity 0.2s, gap 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .meet-card:hover .meet-cta-hint { opacity: 1; gap: 8px; }
+
+    @media (max-width: 768px) {
+      .meet-grid { grid-template-columns: 1fr; gap: 56px; }
+      .meet-banner { justify-content: center; text-align: center; }
+    }
+
+    /* ============================================================
+       Section 3 · Counselor Profiles
+       ============================================================ */
+    .profile-block { padding: clamp(80px, 12vw, 140px) 24px; }
+    .profile-block.alt-bg { background: var(--white); }
+    .profile-block.cream-bg { background: var(--cream); }
+
+    .profile-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 56px;
+      max-width: 1160px;
+      margin: 0 auto;
+      align-items: flex-start;
+    }
+
+    .profile-photo-wrap {
+      position: sticky;
+      top: 100px;
+      text-align: center;
+    }
+    .profile-photo {
+      width: min(280px, 100%);
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--lavender-soft) 0%, var(--mint) 100%);
+      color: var(--dark);
+      margin: 0 auto;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 80px;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      box-shadow: inset 0 0 0 6px var(--white), 0 14px 40px rgba(19, 58, 34, 0.12);
+    }
+    .profile-deco {
+      margin-top: 18px;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      color: var(--lavender-2);
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .profile-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: var(--lavender);
+      color: var(--dark);
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    .profile-name {
+      font-size: clamp(28px, 4vw, 38px);
+      font-weight: 900;
+      color: var(--dark);
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+      line-height: 1.2;
+    }
+    .profile-name-en {
+      font-size: 13px;
+      color: var(--gray);
+      margin-bottom: 28px;
+      letter-spacing: 0.12em;
+    }
+
+    .profile-philosophy {
+      background: var(--mint);
+      border-left: 4px solid var(--lavender);
+      border-radius: 12px;
+      padding: 24px 26px;
+      margin-bottom: 32px;
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--dark);
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    .profile-section-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--lavender-2);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      margin-top: 32px;
+    }
+    .profile-section-title:first-of-type { margin-top: 0; }
+
+    .profile-list {
+      list-style: none;
+      margin-bottom: 8px;
+    }
+    .profile-list li {
+      font-size: 14.5px;
+      color: var(--charcoal);
+      padding: 8px 0 8px 22px;
+      position: relative;
+      line-height: 1.6;
+    }
+    .profile-list li::before {
+      content: '·';
+      position: absolute;
+      left: 6px;
+      top: 4px;
+      color: var(--lavender-2);
+      font-weight: 900;
+      font-size: 22px;
+      line-height: 1;
+    }
+    .profile-list li strong { color: var(--dark); font-weight: 800; }
+
+    .interview-q {
+      font-size: 14.5px;
+      font-weight: 800;
+      color: var(--dark);
+      margin-top: 22px;
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+    .interview-q::before { content: 'Q. '; color: var(--lavender-2); }
+    .interview-a {
+      font-size: 14.5px;
+      color: var(--charcoal);
+      line-height: 1.85;
+      margin-bottom: 4px;
+    }
+    .interview-a strong {
+      color: var(--dark);
+      font-weight: 700;
+      background: linear-gradient(180deg, transparent 65%, var(--lavender-soft) 65%);
+      padding: 0 3px;
+    }
+
+    .recommend-list {
+      background: var(--cream);
+      border-radius: var(--radius);
+      padding: 22px 24px;
+      margin-top: 12px;
+      list-style: none;
+    }
+    .profile-block.cream-bg .recommend-list {
+      background: var(--white);
+    }
+    .recommend-list li {
+      font-size: 14px;
+      color: var(--charcoal);
+      padding: 7px 0 7px 26px;
+      position: relative;
+      line-height: 1.55;
+    }
+    .recommend-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0; top: 7px;
+      color: var(--lavender-2);
+      font-weight: 900;
+    }
+
+    /* ============================================================
+       Section 4 · Stories
+       ============================================================ */
+    .stories { background: var(--mint); }
+    .stories-head { text-align: center; margin-bottom: 64px; }
+
+    .stories-list {
+      display: grid;
+      gap: 24px;
+      max-width: 880px;
+      margin: 0 auto;
+    }
+
+    .story-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 40px 38px;
+      box-shadow: var(--shadow);
+      position: relative;
+      transition: transform 0.2s ease;
+    }
+    .story-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+
+    .story-num {
+      position: absolute;
+      top: 28px;
+      right: 32px;
+      font-size: 36px;
+      font-weight: 900;
+      color: var(--lavender);
+      letter-spacing: -0.03em;
+      opacity: 0.6;
+    }
+    .story-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+    .story-quote {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--lavender-2);
+      font-style: italic;
+      margin-bottom: 18px;
+      line-height: 1.55;
+    }
+    .story-body {
+      font-size: 14.5px;
+      color: var(--charcoal);
+      line-height: 1.85;
+      margin-bottom: 16px;
+    }
+    .story-body strong {
+      color: var(--dark);
+      font-weight: 700;
+      background: linear-gradient(180deg, transparent 65%, var(--lavender-soft) 65%);
+      padding: 0 3px;
+    }
+    .story-change {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--dark);
+      padding-top: 16px;
+      border-top: 1px dashed var(--border);
+    }
+    .story-change strong { color: var(--lavender-2); font-weight: 800; }
+
+    /* ============================================================
+       Section 5 · Matching
+       ============================================================ */
+    .matching { background: var(--cream); }
+    .matching-head { text-align: center; margin-bottom: 64px; }
+
+    .match-flow {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .match-step {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 36px 32px;
+      box-shadow: var(--shadow);
+      border-top: 4px solid var(--lavender);
+    }
+    .match-num {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--lavender-2);
+      letter-spacing: 0.18em;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+    .match-title {
+      font-size: 19px;
+      font-weight: 800;
+      color: var(--dark);
+      letter-spacing: -0.01em;
+      margin-bottom: 12px;
+    }
+    .match-desc {
+      font-size: 14px;
+      color: var(--charcoal);
+      line-height: 1.75;
+    }
+    .match-desc strong { color: var(--dark); font-weight: 700; }
+
+    /* ============================================================
+       Section 6 · Final CTA
+       ============================================================ */
+    .final {
+      background: var(--dark);
+      color: var(--white);
+      text-align: center;
+      padding: clamp(100px, 14vw, 160px) 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .final::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 400px; height: 400px;
+      background: var(--lavender);
+      border-radius: 50%;
+      filter: blur(140px);
+      opacity: 0.22;
+      pointer-events: none;
+    }
+    .final-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+    .final-headline {
+      font-size: clamp(28px, 4.8vw, 44px);
+      font-weight: 800;
+      line-height: 1.35;
+      color: var(--white);
+      letter-spacing: -0.02em;
+      margin-bottom: 36px;
+    }
+    .final-actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ============================================================
+       Responsive
+       ============================================================ */
+    @media (max-width: 960px) {
+      .meet-grid { grid-template-columns: 1fr; gap: 18px; }
+      .profile-grid { grid-template-columns: 1fr; gap: 32px; }
+      .profile-photo-wrap { position: static; }
+      .profile-photo { width: min(220px, 70%); }
+      .profile-photo { font-size: 60px; }
+      .match-flow { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .innov-section,
+      .profile-block { padding: 64px 18px; }
+      .c-hero { padding: 96px 18px 72px; }
+      .c-hero h1 { font-size: clamp(24px, 7.5vw, 32px) !important; }
+      .innov-headline { font-size: clamp(24px, 7vw, 30px) !important; line-height: 1.35; }
+      .meet-card { padding: 30px 22px; }
+      .meet-avatar { width: 100px; height: 100px; font-size: 32px; }
+      .profile-photo { width: min(180px, 60%); font-size: 50px; }
+      .profile-name { font-size: 26px !important; }
+      .profile-philosophy { font-size: 15px; padding: 20px 22px; }
+      .story-card { padding: 30px 24px; }
+      .story-num { font-size: 28px; top: 22px; right: 24px; }
+      .story-title { font-size: 17px; }
+      .story-quote { font-size: 14px; }
+      .story-body { font-size: 13.5px; }
+      .match-step { padding: 28px 24px; }
+      .final { padding: 72px 18px; }
+      .final-actions { flex-direction: column; width: 100%; }
+      .final-actions .innov-btn { width: 100%; }
+    }
+
+    /* ============================================================
+       Counselor Detail Modal (popup)
+       ============================================================ */
+    .counselor-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      display: none;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 60px 20px;
+      overflow-y: auto;
+    }
+    .counselor-modal.open { display: flex; animation: modalFadeIn 0.25s ease-out; }
+    @keyframes modalFadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    .counselor-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(13, 41, 23, 0.55);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      cursor: pointer;
+    }
+    .counselor-modal-card {
+      position: relative;
+      background: #fff;
+      border-radius: 28px;
+      max-width: 720px;
+      width: 100%;
+      padding: 56px 56px 48px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+      z-index: 1;
+      margin: auto 0;
+      animation: modalSlideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes modalSlideUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .counselor-modal-close {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 40px;
+      height: 40px;
+      background: var(--cream);
+      border: none;
+      border-radius: 50%;
+      font-size: 22px;
+      color: var(--dark);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.15s, transform 0.15s;
+      z-index: 2;
+      font-family: inherit;
+      line-height: 1;
+    }
+    .counselor-modal-close:hover { background: var(--lavender-soft); transform: rotate(90deg); }
+
+    /* Within-modal content adjustments (reuses existing profile styles, no photo) */
+    .counselor-modal .profile-tag { margin-top: 0; }
+    .counselor-modal .profile-name { font-size: clamp(24px, 4vw, 32px); }
+    .counselor-modal .profile-philosophy { font-size: 16px; padding: 20px 22px; margin-bottom: 28px; }
+    .counselor-modal .profile-section-title { margin-top: 28px; }
+    .counselor-modal .profile-section-title:first-of-type { margin-top: 24px; }
+
+    body.modal-open { overflow: hidden; }
+
+    @media (max-width: 600px) {
+      .counselor-modal { padding: 32px 14px; }
+      .counselor-modal-card { padding: 48px 24px 32px; border-radius: 20px; }
+      .counselor-modal-close { top: 12px; right: 12px; width: 36px; height: 36px; font-size: 20px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Shared Navigation -->
+  <nav class="innov-nav" id="innovNav">
+    <div class="innov-nav-inner">
+      <a href="index.html" class="innov-nav-logo">
+        <img src="symbol.png" alt="innov 심볼" class="innov-nav-symbol" />
+        <img src="logo-innov.png" alt="innov" class="innov-nav-wordmark" onerror="this.outerHTML=&apos;<span class=\&apos;brand-script\&apos;>innov</span>&apos;" />
+      </a>
+      <ul class="innov-nav-menu" id="innovMenu">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="page-about.html">ABOUT</a></li>
+        <li><a href="page-counselors.html" class="active">COACH</a></li>
+        <li><a href="page-programs.html">PROGRAM</a></li>
+        <li><a href="page-apply.html">APPLY</a></li>
+      </ul>
+      <a href="page-apply.html" class="innov-nav-cta">상담 신청</a>
+      <button class="innov-nav-toggle" id="innovToggle" aria-label="메뉴 열기">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       Section 1 · Hero
+       ============================================================ -->
+  <section class="c-hero">
+    <div class="innov-container">
+      <span class="innov-overline">our team</span>
+      <h1>
+        우리는 <em>변화의 증거</em>이자,<br>
+        당신의 페이스메이커입니다.
+      </h1>
+      <p class="c-hero-sub">
+        INNOV의 상담사는 단순히 가르치는 사람이 아닙니다.<br>
+        모두 <strong>"무기력의 터널을 지나온 사람들"</strong>입니다.<br>
+        그 체험이 곧 상담의 진정성을 만듭니다.
+      </p>
+      <div class="c-hero-tag">Founder &amp; Clinical Director · NLP Specialist Team</div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Section 2 · Meet the Team
+       ============================================================ -->
+  <section class="meet">
+    <header class="meet-banner">
+      <a href="index.html" class="meet-banner-logo">
+        <img src="logo-innov.png" alt="innov" onerror="this.outerHTML='<span class=\'brand-script\'>innov</span>'" />
+      </a>
+      <p class="meet-banner-tag">Founder &amp; Clinical Director <span class="bar">|</span> NLP Specialist</p>
+    </header>
+
+    <div class="meet-grid">
+      <!-- 고가영 -->
+      <a href="#counselor-1" class="meet-card" data-counselor="counselor-1">
+        <div class="meet-photo-wrap">
+          <img src="assets/counselor-koGayeong.jpg" alt="고가영" class="meet-photo"
+               onerror="this.outerHTML='<div class=\'meet-photo-fallback\'>고</div>'" />
+          <svg class="meet-photo-accent" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- 측면 여성 실루엣 -->
+            <path d="M22 18 Q26 12, 34 13 Q42 15, 44 22 Q46 28, 43 33 L40 38 Q41 42, 44 44"
+                  stroke="#b891f9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M22 18 Q15 22, 13 30 Q12 38, 16 46 Q20 52, 26 54"
+                  stroke="#b891f9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M18 22 Q14 32, 18 44"
+                  stroke="#b891f9" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+          </svg>
+        </div>
+        <div class="meet-name-row">
+          <span class="meet-name-kr">고가영</span>
+          <span class="meet-name-en">KO GAYEONG</span>
+        </div>
+        <ul class="meet-creds">
+          <li>서울대학교 조선해양공학 졸업</li>
+          <li>NLP 전문 상담사 1급 자격증 보유</li>
+          <li>청년세대 상담 및 멘탈코칭 이력 4년</li>
+          <li>청년단체 인문학 프로젝트 기획·운영 2년</li>
+        </ul>
+        <span class="meet-cta-hint">자세히 보기 →</span>
+      </a>
+
+      <!-- 김나희 -->
+      <a href="#counselor-2" class="meet-card" data-counselor="counselor-2">
+        <div class="meet-photo-wrap">
+          <img src="assets/counselor-kimNahui.jpg" alt="김나희" class="meet-photo"
+               onerror="this.outerHTML='<div class=\'meet-photo-fallback\'>나</div>'" />
+          <svg class="meet-photo-accent" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M22 18 Q26 12, 34 13 Q42 15, 44 22 Q46 28, 43 33 L40 38 Q41 42, 44 44"
+                  stroke="#b891f9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M22 18 Q15 22, 13 30 Q12 38, 16 46 Q20 52, 26 54"
+                  stroke="#b891f9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M18 22 Q14 32, 18 44"
+                  stroke="#b891f9" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+          </svg>
+        </div>
+        <div class="meet-name-row">
+          <span class="meet-name-kr">김나희</span>
+          <span class="meet-name-en">KIM NAHUI</span>
+        </div>
+        <ul class="meet-creds">
+          <li>성균관대학교 생명과학 졸업</li>
+          <li>NLP 전문 상담사 1급 자격증 보유</li>
+          <li>청년세대 상담 및 멘탈코칭 이력 7년</li>
+          <li>청년단체 인문학 세미나 기획·강의 25회</li>
+          <li>[한계가 없는 Thinking] 교육 제작</li>
+        </ul>
+        <span class="meet-cta-hint">자세히 보기 →</span>
+      </a>
+
+      <!-- 서 진 -->
+      <a href="#counselor-3" class="meet-card" data-counselor="counselor-3">
+        <div class="meet-photo-wrap">
+          <img src="assets/counselor-seoJin.jpg" alt="서 진" class="meet-photo"
+               onerror="this.outerHTML='<div class=\'meet-photo-fallback\'>진</div>'" />
+          <svg class="meet-photo-accent" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M22 18 Q26 12, 34 13 Q42 15, 44 22 Q46 28, 43 33 L40 38 Q41 42, 44 44"
+                  stroke="#b891f9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M22 18 Q15 22, 13 30 Q12 38, 16 46 Q20 52, 26 54"
+                  stroke="#b891f9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M18 22 Q14 32, 18 44"
+                  stroke="#b891f9" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+          </svg>
+        </div>
+        <div class="meet-name-row">
+          <span class="meet-name-kr">서&nbsp;진</span>
+          <span class="meet-name-en">SEO JIN</span>
+        </div>
+        <ul class="meet-creds">
+          <li>한국예술종합학교 조형예술학 학사</li>
+          <li>NLP 전문 상담사 1급 자격증 보유</li>
+          <li>청장년세대 상담 및 멘탈코칭 이력 8년</li>
+          <li>팬데믹 멘탈코칭 프로그램 [뉴노멀 예술활동] 운영</li>
+          <li>[500가지의 감정 '나를 찾아서'] 전시 기획·운영</li>
+        </ul>
+        <span class="meet-cta-hint">자세히 보기 →</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Smooth scroll offset for fixed nav (so anchor links land below header) -->
+  <style>
+    html { scroll-padding-top: 80px; }
+  </style>
+
+  <!-- ============================================================
+       Counselor Detail Modals (popup, text-only)
+       ============================================================ -->
+  <div class="counselor-modal" id="counselor-1" role="dialog" aria-modal="true" aria-labelledby="modal-name-1">
+    <div class="counselor-modal-backdrop" data-close></div>
+    <article class="counselor-modal-card">
+      <button type="button" class="counselor-modal-close" data-close aria-label="닫기">×</button>
+
+      <span class="profile-tag">Founder &amp; Clinical Director · NLP Specialist</span>
+      <h2 class="profile-name" id="modal-name-1">고가영</h2>
+      <div class="profile-name-en">KO GAYEONG</div>
+
+      <div class="profile-philosophy">
+        "복잡한 내면의 구조를 논리적으로 분석하여 해답을 찾습니다."
+      </div>
+
+      <div class="profile-section-title">Profile</div>
+      <ul class="profile-list">
+        <li>서울대학교 조선해양공학 학사</li>
+        <li>NLP 전문 상담사 1급 자격증 보유</li>
+        <li>청년세대 상담 및 멘탈코칭 이력 <strong>4년</strong></li>
+        <li>청년단체 인문학 프로젝트 기획·운영 <strong>2년</strong></li>
+      </ul>
+
+      <div class="profile-section-title">Interview · 내가 상담사가 된 이유</div>
+
+      <div class="interview-q">공학도에서 상담사로, 가장 큰 전환점은?</div>
+      <p class="interview-a">
+        저는 숫자와 구조로 세상을 이해하는 훈련을 오래 받았습니다. 그런데 어느 순간, 가장 분석되지 않는 건 제 자신이라는 걸 알게 됐어요. '왜 이 선택이 나를 공허하게 만드는가.' 공학이 답하지 못하는 질문 앞에서, 저는 사람의 마음도 <strong>하나의 시스템</strong>이라는 걸 배웠습니다.
+      </p>
+
+      <div class="interview-q">상담에서 가장 중요하게 여기는 것은?</div>
+      <p class="interview-a">
+        '감정을 덜어주는 것'보다 <strong>'구조를 보여드리는 것'</strong>이에요. 내담자가 자신의 사고 패턴을 도식처럼 볼 수 있을 때, 비로소 스스로 해답을 설계하기 시작합니다.
+      </p>
+
+      <div class="profile-section-title">이런 분께 추천</div>
+      <ul class="recommend-list">
+        <li>감정보다는 논리로 문제를 정리하고 싶은 분</li>
+        <li>방향성 상실, 선택 불안을 겪는 청년</li>
+        <li>성과 기반 삶에서 번아웃을 경험한 분</li>
+      </ul>
+    </article>
+  </div>
+
+  <div class="counselor-modal" id="counselor-2" role="dialog" aria-modal="true" aria-labelledby="modal-name-2">
+    <div class="counselor-modal-backdrop" data-close></div>
+    <article class="counselor-modal-card">
+      <button type="button" class="counselor-modal-close" data-close aria-label="닫기">×</button>
+
+      <span class="profile-tag">Senior Counselor · NLP Specialist</span>
+      <h2 class="profile-name" id="modal-name-2">김나희</h2>
+      <div class="profile-name-en">KIM NAHUI</div>
+
+      <div class="profile-philosophy">
+        "생각의 차원을 높여 한계를 넘어서는 성장을 지원합니다."
+      </div>
+
+      <div class="profile-section-title">Profile</div>
+      <ul class="profile-list">
+        <li>성균관대학교 생명과학 학사</li>
+        <li>NLP 전문 상담사 1급 자격증 보유</li>
+        <li>청년세대 상담 및 멘탈코칭 이력 <strong>7년</strong></li>
+        <li>청년단체 인문학 세미나 기획·강의 <strong>25회</strong></li>
+        <li>[한계가 없는 Thinking — 생각의 차원이 중요해] 교육 프로그램 제작</li>
+      </ul>
+
+      <div class="profile-section-title">Interview · 내가 상담사가 된 이유</div>
+
+      <div class="interview-q">생명과학에서 출발한 통찰이 상담에 어떻게 연결되나요?</div>
+      <p class="interview-a">
+        생명과학은 <strong>'체계 안에서 변이가 어떻게 일어나는가'</strong>를 보는 학문이에요. 사람의 사고도 같습니다. 우리는 정해진 프레임 안에서 변주할 뿐이죠. 그 프레임 자체를 바꾸는 순간, 삶은 다른 차원에서 움직입니다.
+      </p>
+
+      <div class="interview-q">7년간 가장 변화가 컸던 상담은?</div>
+      <p class="interview-a">
+        "난 이게 최선이에요"라고 말하던 분이, 3개월 후 <strong>"이게 유일한 길이 아니었네요"</strong>라고 말한 순간이에요. 그 한 줄의 변화가 인생의 궤적을 바꿉니다.
+      </p>
+
+      <div class="profile-section-title">이런 분께 추천</div>
+      <ul class="recommend-list">
+        <li>한계를 미리 정하는 사고 습관에서 벗어나고 싶은 분</li>
+        <li>"이것밖에 없다"는 사고에 갇힌 청년</li>
+        <li>세미나·교육 경험을 통한 지적 자극을 선호하는 분</li>
+      </ul>
+    </article>
+  </div>
+
+  <div class="counselor-modal" id="counselor-3" role="dialog" aria-modal="true" aria-labelledby="modal-name-3">
+    <div class="counselor-modal-backdrop" data-close></div>
+    <article class="counselor-modal-card">
+      <button type="button" class="counselor-modal-close" data-close aria-label="닫기">×</button>
+
+      <span class="profile-tag">Senior Counselor · NLP Specialist</span>
+      <h2 class="profile-name" id="modal-name-3">서&nbsp;진</h2>
+      <div class="profile-name-en">SEO JIN</div>
+
+      <div class="profile-philosophy">
+        "감정의 색채를 발견하고 삶이라는 작품을 아름답게 조형합니다."
+      </div>
+
+      <div class="profile-section-title">Profile</div>
+      <ul class="profile-list">
+        <li>한국예술종합학교 조형예술학 학사</li>
+        <li>NLP 전문 상담사 1급 자격증 보유</li>
+        <li>청장년세대 상담 및 멘탈코칭 이력 <strong>8년</strong></li>
+        <li>팬데믹 멘탈코칭 프로그램 [뉴노멀 예술활동] 운영</li>
+        <li>[500가지의 감정 '나를 찾아서'] 시민 참여형 전시 기획·운영</li>
+      </ul>
+
+      <div class="profile-section-title">Interview · 내가 상담사가 된 이유</div>
+
+      <div class="interview-q">조형예술과 심리상담의 접점은 어디에 있나요?</div>
+      <p class="interview-a">
+        예술은 <strong>형태를 찾지 못한 감정에 이름을 붙이는 작업</strong>이에요. 사람의 무의식도 마찬가지입니다. 표현되지 않은 감정은 에너지로만 떠돌다 무기력이 됩니다. 저는 그 흩어진 색을 모아 하나의 구조로 보여드립니다.
+      </p>
+
+      <div class="interview-q">500가지 감정 전시는 어떻게 상담으로 이어졌나요?</div>
+      <p class="interview-a">
+        사람들이 자신의 감정에 <strong>정확한 언어</strong>를 갖지 못한 채 살아간다는 걸 깨달았어요. "그냥 힘들어요"라고 말하는 감정이 실은 50개의 결로 나뉠 수 있음을 보여드리는 것, 그게 치유의 첫 걸음이었습니다.
+      </p>
+
+      <div class="profile-section-title">이런 분께 추천</div>
+      <ul class="recommend-list">
+        <li>감정을 명확히 표현하지 못해 답답한 분</li>
+        <li>예술적·감각적 접근에 편안함을 느끼는 분</li>
+        <li>번아웃 후 삶의 '결'을 다시 조율하고 싶은 분</li>
+      </ul>
+    </article>
+  </div>
+
+  <!-- ============================================================
+       Section 4 · Stories
+       ============================================================ -->
+  <section class="stories innov-section">
+    <div class="innov-container">
+      <div class="stories-head">
+        <span class="innov-overline">our stories</span>
+        <h2 class="innov-headline">
+          우리가 지나온 <em>터널의 이야기</em>
+        </h2>
+        <p class="innov-subhead">
+          INNOV 상담사들은 모두 한때 <strong style="color:var(--dark); font-weight:800;">길을 잃었던 청년</strong>이었습니다.<br>
+          그 경험이 곧 당신을 이해하는 언어가 됩니다.
+        </p>
+      </div>
+
+      <div class="stories-list">
+        <article class="story-card">
+          <div class="story-num">01</div>
+          <h3 class="story-title">방향을 잃은 성취자</h3>
+          <p class="story-quote">"이대로만 가면 잘 될 줄 알았는데…"</p>
+          <p class="story-body">
+            성과와 안정만을 좇던 삶이 결국 자신을 잃게 만든 순간이 있었습니다. 시간적·마음적 여유 없이 세상에 맞춘 삶 속에서 느낀 <strong>공허한 무기력</strong>. 한 상담사는 그 터널에서 <strong>안정이 아닌 진정성의 기준</strong>을 다시 세웠고, 지금은 같은 자리에 선 청년들의 나침반이 되고 있습니다.
+          </p>
+          <p class="story-change">→ 변화: 외부 기준 → <strong>내부 기준</strong> 중심의 삶</p>
+        </article>
+
+        <article class="story-card">
+          <div class="story-num">02</div>
+          <h3 class="story-title">사고방식의 전환 경험자</h3>
+          <p class="story-quote">"지금까지의 사고방식이 전부가 아니었다."</p>
+          <p class="story-body">
+            '이렇게만 살아야 한다'는 강박 속에서 자신을 소모시키던 시기. 한 상담사는 상담을 통해 그 <strong>강박의 구조를 해체</strong>하고, 도전과 탐색의 가치, 그리고 <strong>'좋아하는 나'</strong>를 찾아가는 삶으로 방향을 틀었습니다.
+          </p>
+          <p class="story-change">→ 변화: 의식의 확장 → <strong>새로운 삶의 방향</strong> 발견</p>
+        </article>
+
+        <article class="story-card">
+          <div class="story-num">03</div>
+          <h3 class="story-title">무기력을 자산으로 전환한 사람</h3>
+          <p class="story-quote">"이제는 약점이 아니라, 성장의 데이터로 봅니다."</p>
+          <p class="story-body">
+            못 가진 것, 부족한 것, 실패의 경험. 그 모든 것을 부정하지 않고 <strong>사고의 틀을 전환시켜 자산화</strong>한 이야기. 내면의 단단함은 결핍을 숨기는 데서 오는 것이 아니라, <strong>결핍을 해석할 줄 아는 힘</strong>에서 시작됩니다.
+          </p>
+          <p class="story-change">→ 변화: 자기 이해 → <strong>자기 신뢰</strong>로의 확장</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Section 5 · Matching
+       ============================================================ -->
+  <section class="matching innov-section">
+    <div class="innov-container">
+      <div class="matching-head">
+        <span class="innov-overline">how we match</span>
+        <h2 class="innov-headline">
+          나와 맞는 상담사는<br>
+          <em>어떻게 정해지나요?</em>
+        </h2>
+      </div>
+
+      <div class="match-flow">
+        <div class="match-step">
+          <div class="match-num">Step 1</div>
+          <div class="match-title">사전 설문</div>
+          <p class="match-desc">
+            상담 신청 시 10문항 내외의 성향 설문에 답해주세요. 선호 소통 스타일, 현재 주요 이슈, 이전 상담 경험 등을 확인합니다.
+          </p>
+        </div>
+        <div class="match-step">
+          <div class="match-num">Step 2</div>
+          <div class="match-title">매칭 분석</div>
+          <p class="match-desc">
+            임상 디렉터가 설문을 리뷰하고, 당신의 사고 유형과 현재 필요에 맞는 상담사를 추천합니다.
+          </p>
+        </div>
+        <div class="match-step">
+          <div class="match-num">Step 3</div>
+          <div class="match-title">첫 세션</div>
+          <p class="match-desc">
+            매칭된 상담사와 <strong>무료 사전 미팅 15분</strong>을 통해 실제 결이 맞는지 확인합니다. 필요 시 다른 상담사로 재매칭도 가능합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Section 6 · Final CTA
+       ============================================================ -->
+  <section class="final">
+    <div class="final-inner">
+      <h2 class="final-headline">
+        당신의 터널에도,<br>
+        먼저 지나온 사람이 있습니다.
+      </h2>
+      <div class="final-actions">
+        <a href="/apply" class="innov-btn innov-btn-lavender innov-btn-arrow">프로그램 자세히 보기</a>
+      </div>
+    </div>
+  </section>
+
+<!-- Nav behaviors -->
+<script>
+(function() {
+  const nav = document.getElementById('innovNav');
+  const menu = document.getElementById('innovMenu');
+  const toggle = document.getElementById('innovToggle');
+  if (nav) window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 8));
+  if (toggle && menu) toggle.addEventListener('click', () => menu.classList.toggle('open'));
+})();
+</script>
+
+<!-- Counselor Modal — open/close behaviour -->
+<script>
+(function() {
+  const cards = document.querySelectorAll('.meet-card[data-counselor]');
+  const modals = document.querySelectorAll('.counselor-modal');
+  if (!cards.length || !modals.length) return;
+
+  function openModal(id) {
+    const modal = document.getElementById(id);
+    if (!modal) return;
+    modal.classList.add('open');
+    document.body.classList.add('modal-open');
+    // Focus close button for keyboard accessibility
+    const closeBtn = modal.querySelector('.counselor-modal-close');
+    if (closeBtn) setTimeout(() => closeBtn.focus(), 50);
+  }
+
+  function closeAll() {
+    modals.forEach(m => m.classList.remove('open'));
+    document.body.classList.remove('modal-open');
+  }
+
+  cards.forEach(card => {
+    card.addEventListener('click', e => {
+      e.preventDefault();
+      openModal(card.getAttribute('data-counselor'));
+    });
+  });
+
+  modals.forEach(modal => {
+    modal.addEventListener('click', e => {
+      if (e.target.hasAttribute('data-close')) closeAll();
+    });
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeAll();
+  });
+})();
+</script>
+
+<script>
+  /* 환경 자동 감지 — 내부 링크 자동 변환
+     - 로컬 (file:// 또는 .html URL) → 'page-X.html' 상대경로
+     - 호스팅 (아임웹 등) → '/X' 절대경로 그대로 유지 */
+  (function() {
+    const isLocal = window.location.protocol === 'file:' || /\.html?$/i.test(window.location.pathname);
+    if (!isLocal) return;
+    const pathMap = {
+      '/about':       'page-about.html',
+      '/program':     'page-programs.html',
+      '/programs':    'page-programs.html',
+      '/coach':       'page-counselors.html',
+      '/counselors':  'page-counselors.html',
+      '/apply':       'page-apply.html',
+      '/consulting':  'page-consulting.html'
+    };
+    document.querySelectorAll('a[href]').forEach(a => {
+      const href = a.getAttribute('href');
+      if (!href || !href.startsWith('/')) return;
+      for (const [imwebPath, localPath] of Object.entries(pathMap)) {
+        if (href === imwebPath || href.startsWith(imwebPath + '#') || href.startsWith(imwebPath + '?')) {
+          a.setAttribute('href', href.replace(imwebPath, localPath));
+          break;
+        }
+      }
+    });
+  })();
+</script>
+
+
+<!-- Shared Footer -->
+<footer class="innov-footer">
+  <div class="innov-footer-inner">
+    <div class="innov-footer-brand innov-footer-col">
+      <a href="index.html" class="innov-footer-logo">
+        <img src="symbol.png" alt="innov 심볼" class="innov-footer-symbol">
+        <img src="logo-innov.png" alt="innov" class="innov-footer-wordmark" onerror="this.outerHTML=&apos;<span class=\&apos;brand-script\&apos;>innov</span>&apos;">
+      </a>
+      <p class="innov-footer-tagline">보이지 않는 내면의 구조를 시각화하여,<br>실질적인 삶의 변화를 만드는 혁신적 코칭 솔루션</p>
+      <div class="innov-footer-social">
+        <a href="mailto:innov.storytelling@gmail.com">Email</a>
+        <a href="https://pf.kakao.com/_xodxeTX" target="_blank" rel="noopener">KakaoTalk</a>
+        <a href="https://www.instagram.com/innov.kr/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="innov-footer-nav innov-footer-col">
+      <h4>Menu</h4>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="page-about.html">ABOUT</a></li>
+        <li><a href="page-counselors.html">COACH</a></li>
+        <li><a href="page-programs.html">PROGRAM</a></li>
+        <li><a href="page-apply.html">APPLY</a></li>
+      </ul>
+    </div>
+    <div class="innov-footer-info innov-footer-col">
+      <h4>Company</h4>
+      <p><strong>CEO</strong> · 고가영</p>
+      <p><strong>Address</strong> · 대전광역시 서구 둔산대로 117번길 66, 1202-139호</p>
+      <p><strong>사업자등록번호</strong> · 790-30-01865</p>
+      <p><strong>운영시간</strong> · 평일 10:00 — 19:00</p>
+      <p><strong>Contact</strong> · innov.storytelling@gmail.com</p>
+    </div>
+  </div>
+  <div class="innov-footer-bottom">
+    <div class="innov-footer-bottom-inner">
+      <div class="innov-footer-legal">
+        <a href="page-terms.html">이용약관</a>
+        <a href="page-privacy.html">개인정보처리방침</a>
+      </div>
+      <p class="innov-footer-copy">© 2026 INNOV. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>
