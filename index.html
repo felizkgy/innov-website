@@ -453,6 +453,55 @@
 .problem-card .q { font-style: italic; color: var(--dark); font-weight: 600; margin-bottom: 8px; }
 .problem-card p { color: var(--charcoal); font-size: 15px; line-height: 1.75; }
 
+/* 진단 신청 배너 CTA — 문제 공감 → 진단 신청으로 연결 */
+.test-cta-banner {
+  margin-top: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  flex-wrap: wrap;
+  padding: 28px 32px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--lavender-soft) 0%, var(--mint) 100%);
+  border: 1px solid var(--lavender-soft);
+  text-decoration: none !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.test-cta-banner:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+.test-cta-banner .tcb-text { flex: 1; min-width: 240px; }
+.test-cta-banner .tcb-tag {
+  display: inline-block;
+  font-size: 12px; font-weight: 800; letter-spacing: 0.04em;
+  color: var(--lavender-2);
+  margin-bottom: 8px;
+}
+.test-cta-banner .tcb-title {
+  font-size: 21px; font-weight: 800; color: var(--dark);
+  line-height: 1.4; letter-spacing: -0.02em; margin-bottom: 6px;
+}
+.test-cta-banner .tcb-sub {
+  font-size: 14px; color: var(--dark); opacity: 0.78; line-height: 1.6;
+}
+.test-cta-banner .tcb-sub strong { font-weight: 800; }
+.test-cta-banner .tcb-sub del { opacity: 0.55; margin-right: 4px; font-weight: 500; }
+.test-cta-banner .tcb-btn {
+  flex-shrink: 0;
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--dark); color: var(--white);
+  padding: 15px 26px; border-radius: 999px;
+  font-size: 15px; font-weight: 700; white-space: nowrap;
+  transition: background 0.2s ease;
+}
+.test-cta-banner:hover .tcb-btn { background: var(--dark-2); }
+.test-cta-banner .tcb-btn::after { content: '→'; transition: transform 0.2s ease; }
+.test-cta-banner:hover .tcb-btn::after { transform: translateX(4px); }
+@media (max-width: 640px) {
+  .test-cta-banner { padding: 24px 22px; margin-top: 36px; }
+  .test-cta-banner .tcb-title { font-size: 18px; }
+  .test-cta-banner .tcb-btn { width: 100%; justify-content: center; }
+}
+
 /* ============================================================
    Section 3 · Solution
    ============================================================ */
@@ -699,6 +748,16 @@
           </article>
         </div>
       </div>
+
+      <!-- 진단 신청 배너 — 클릭 시 3만원 진단 랜딩(/test)로 이동 -->
+      <a href="/test/?from=home" class="test-cta-banner">
+        <div class="tcb-text">
+          <span class="tcb-tag">INNOV REFRAME · 사전 진단</span>
+          <div class="tcb-title">그래서, 먼저 ‘나’를 진단해보세요.</div>
+          <div class="tcb-sub">3대 진단 中 1종 + 전문가 1:1 분석 상담 · <del>정규 50,000원</del><strong>지금 30,000원</strong></div>
+        </div>
+        <span class="tcb-btn">3만원 진단 신청하기</span>
+      </a>
     </div>
   </section>
 
